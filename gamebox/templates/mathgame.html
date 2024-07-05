@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math Game</title>
+</head>
+<body>
+    <h1>Math Game</h1>
+    <p>Solve: {{ num1 }} + {{ num2 }}</p>
+    <form action="/start_mathgame" method="get">
+        <input type="number" name="user_ans">
+        <button type="submit">Submit</button>
+    </form>
+    <p>{{ message }}</p>
+    <p>Score: {{ count }}</p>
+</body>
+</html>
