@@ -36,12 +36,12 @@ def start_mathgame():
     rendered_template = mathgame_logic(num1, num2, user_ans, count)
     
     # 数値を取り出してセッションを更新
-    if "Correct! Try the next one." in rendered_template:
+    if "正解！" in rendered_template:
         session['num1'] = random.randint(1, 30)
         session['num2'] = random.randint(1, 30)
         session['count'] = count + 1
         return redirect(url_for('start_mathgame'))
-    elif "Incorrect, try again!" in rendered_template:
+    elif "間違い！" in rendered_template:
         return rendered_template
     else:
         return rendered_template

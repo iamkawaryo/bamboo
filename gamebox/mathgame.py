@@ -11,7 +11,7 @@ def mathgame_logic(num1, num2, user_ans, count):
             num1 = random.randint(1, 30)
             num2 = random.randint(1, 30)
             print(count)
-            return render_template("mathgame.html", num1=num1, num2=num2, count=count, message="Correct! Try the next one.")
+            return render_template("mathgame.html", num1=num1, num2=num2, count=count, message="正解！")
         else:
             end_time = time.time()  # タイマーストップ
 
@@ -20,4 +20,4 @@ def mathgame_logic(num1, num2, user_ans, count):
             formated_score =  f"{score:.5f}"
             return render_template("mathgame_result.html", score = formated_score)  # 結果を表示するテンプレート
     else:
-        return render_template("mathgame.html", num1=num1, num2=num2, count=count, message="Incorrect, try again!")
+        return render_template("mathgame.html", num1=num1, num2=num2, count=count, message="間違い！")
