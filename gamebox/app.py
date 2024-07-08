@@ -1,3 +1,5 @@
+#page URL is http://127.0.0.1:8888/
+
 from flask import Flask, render_template, request, session, redirect, url_for
 import random, time
 from mathgame import mathgame_logic

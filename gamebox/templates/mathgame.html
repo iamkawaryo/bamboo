@@ -8,7 +8,7 @@
     <h1>Math Game</h1>
     <p>Solve: {{ num1 }} + {{ num2 }}</p>
     <form action="/start_mathgame" method="get">
-        <input type="number" name="user_ans">
+        <input type="number" name="user_ans" autofocus>
         <button type="submit">Submit</button>
     </form>
     <p>{{ message }}</p>
