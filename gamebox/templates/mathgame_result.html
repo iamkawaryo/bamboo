@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Game Over</title>
 </head>
-<body>
+<body class = "template">
     <h1>ゲーム終了！</h1>
-    <p>あなたのタイムは {{ score }}　秒です</p>
+    <p>{{ name }} さんのタイムは {{ score }}　秒です</p>
     <form action = "/mathgame_home" method = "get">
         <input type = "submit" value = 'ホームに戻る'>
 </body>
