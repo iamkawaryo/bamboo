@@ -3,6 +3,7 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 import random, time
 from mathgame import mathgame_logic
+from node_list import Node, LinkedList
 
 app = Flask(__name__)
 app.secret_key = 'bamboo'  # セッション用の秘密鍵を設定
@@ -14,6 +15,10 @@ def start():
 @app.route("/home", methods=["GET"])
 def home():
     return render_template("home.html")
+
+@app.route("/mathgame_home", methods=["GET"])
+def mathgame_home():
+    return render_template("mathgame_home.html")
 
 @app.route("/mathgame", methods=["GET"])
 def mathgame():
