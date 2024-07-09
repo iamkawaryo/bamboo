@@ -29,7 +29,7 @@ def mathgame():
     session['num1'] = num1  # セッションにnum1を保存
     session['num2'] = num2  # セッションにnum2を保存
     session['count'] = 0  # 初期のカウントをセッションに保存
-    session['name'] = session.get('name')
+    session['name'] = request.args.get('name')
     return render_template("mathgame.html", num1=num1, num2=num2)
 
 @app.route("/start_mathgame", methods=["GET"])
